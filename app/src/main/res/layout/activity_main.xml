@@ -3,9 +3,117 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    >
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend1"
+        android:id="@+id/f1Text"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+
+        android:textIsSelectable="false"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ETA"
+        android:id="@+id/f1ETA"
+        android:layout_alignTop="@+id/f1Text"
+        android:layout_alignParentEnd="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend2"
+        android:id="@+id/f2Text"
+        android:textSize="30dp"
+        android:layout_below="@+id/f1_transport"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ETA"
+        android:id="@+id/f2ETA"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/f2Text"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend3"
+        android:id="@+id/f3Text"
+        android:textSize="30dp"
+        android:layout_below="@+id/f2Text"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ETA"
+        android:id="@+id/f3ETA"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/f3Text"
+        android:layout_toEndOf="@+id/f1_transport" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend4"
+        android:id="@+id/f4Text"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ETA"
+        android:id="@+id/f4ETA"
+        android:textSize="30dp"
+        android:layout_alignTop="@+id/f4Text"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:id="@+id/f1_transport"
+        android:src="@drawable/bike"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:layout_alignTop="@+id/f1ETA"
+        android:layout_toStartOf="@+id/f1ETA" />
+
+    <ImageView
+        android:id="@+id/f2_transport"
+        android:src="@drawable/car"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/f2ETA"
+        android:layout_alignStart="@+id/f1_transport" />
+
+    <ImageView
+        android:id="@+id/f3_transport"
+        android:src="@drawable/walk"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/f3ETA"
+        android:layout_alignStart="@+id/f2_transport" />
+
+    <ImageView
+        android:id="@+id/f4_transport"
+        android:src="@drawable/walk"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/f4ETA"
+        android:layout_alignStart="@+id/f3_transport" />
 
 </RelativeLayout>
